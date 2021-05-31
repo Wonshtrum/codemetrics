@@ -1,9 +1,10 @@
 environment:
     matrix:
         - PYTHON: Python36
-        - PYTHON: Python37
-        - PYTHON: Python38
-        - PYTHON: Python39
+        - PYTHON: Python37-x64
+        - PYTHON: Python38-x64
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+          PYTHON: C:\Python39-x64
 
 install:
     - C:\%PYTHON%\python.exe -m pip install .
